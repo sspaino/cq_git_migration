@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd external/openblas
+rm -rf bin include lib openblas-src tmp

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+rm -fr external/libint2-build
+rm -fr external/libint2-src
+rm -fr external/libint2-subbuild
+rm -fr external/libint2
