@@ -49,6 +49,8 @@ int main(int argc, char *argv[]) {
 
   std::string oldRstFileName;
 
+  cout << "TRIGGERED!!!"
+
   // Parse command line options
   if(argc < 2) { // No Options
 
