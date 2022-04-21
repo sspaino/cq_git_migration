@@ -11,6 +11,10 @@ jobs:
                 runs-on: ubuntu-latest
 
                 steps:
-                        - echo Hello World!
-                        - echo number 2!
-                        - cyka blyat
+                        - name: testing
+                        - run:  |
+                                echo 'Hello World'
+                                echo 'Number 2!'
+                                mkdir cyka blyat
+                                ls
+                               
