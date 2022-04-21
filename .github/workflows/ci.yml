@@ -10,7 +10,7 @@ jobs:
         build_docker_image:
                 runs-on: ubuntu-latest
 
-                script:
+                steps:
                         - echo Hello World!
                         - echo number 2!
                         - cyka blyat
