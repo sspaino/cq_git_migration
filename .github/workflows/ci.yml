@@ -1,0 +1,16 @@
+name: Chronus Quantum Continuous Integration
+
+on:
+        push:
+                branches: [master]
+        pull_requests:
+                branches: [master]
+
+jobs:
+        build_docker_image:
+                runs-on: ubuntu-latest
+
+                script:
+                        - echo Hello World!
+                        - echo number 2!
+                        - cyka blyat
