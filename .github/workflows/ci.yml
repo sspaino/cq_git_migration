@@ -11,8 +11,10 @@ jobs:
                 runs-on: ubuntu-latest
 
                 steps:
+                        - name: Merging to master
+                          uses: actions/merge@master
                         - name: testing
-                        - run:  |
+                          run:  |
                                 echo 'Hello World'
                                 echo 'Number 2!'
                                 mkdir cyka blyat
