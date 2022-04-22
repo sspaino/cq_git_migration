@@ -18,5 +18,5 @@ jobs:
                                 echo 'Hello World'
                                 echo 'Number 2!'
                                 mkdir cyka blyat
-                                ls
+                                
                                
