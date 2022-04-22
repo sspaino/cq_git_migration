@@ -12,7 +12,7 @@ jobs:
 
                 steps:
                         - name: Merging to master
-                          uses: liaocan8/cq_git_migration@master
+                          uses: actions/checkout@v3
                         - name: testing
                           run:  |
                                 echo 'Hello World'
