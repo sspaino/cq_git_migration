@@ -1,22 +1,24 @@
-name: Chronus Quantum Continuous Integration
+name: Chronus Quantum Continuous Integration - Docker
 
 on:
         push:
                 branches: [master]
-        pull_request:
-                branches: [master]
 
 jobs:
-        build_yourmom_image:
+        build_docker_image:
                 runs-on: ubuntu-latest
 
                 steps:
-                        - name: Merging to master
+                        - name: Building Docker Image
                           uses: actions/checkout@v3
-                        - name: testing
+
+                        - name: Test Building Docker Image
                           run:  |
-                                echo 'Hello World'
-                                echo 'Number 2!'
-                                mkdir cyka blyat
+                                export CQ_VERSION=$(grep "project(ChronusQ" -A 7 CMakeLists.txt | grep "VERSION" | sed 's/ \+VERSION //')
+                                docker build -t uwligroup/chronusq:$CQ_VERSION .
+                                docker push uwligroup/chronusq:$CQ_VERSION
+                                docker tag uwligroup/chronusq:$CQ_VERSION uwligroup/chronusq:latest
+                                docker push uwligroup/chronusq:latest
+                                docker logout
                                 
                                
